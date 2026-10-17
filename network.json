@@ -1,0 +1,151 @@
+{
+  "version": 1,
+  "neurons": [
+    {
+      "name": "A",
+      "x": -200.0,
+      "y": 0.0,
+      "color": [
+        230,
+        0,
+        0
+      ],
+      "stim_amplitude": 60.0,
+      "bias_current": 0.0,
+      "params": {
+        "C_m": 1.0,
+        "g_Na_max": 120.0,
+        "g_K_max": 36.0,
+        "g_Cl": 0.3,
+        "E_Na": 60.0,
+        "E_K": -90.0,
+        "E_Cl": -70.0,
+        "Na_i": 12.0,
+        "Na_o": 145.0,
+        "K_i": 140.0,
+        "K_o": 4.0,
+        "K_Na": 10.0,
+        "K_K": 1.5,
+        "I_pump_max": 10.0
+      }
+    },
+    {
+      "name": "B",
+      "x": 0.0,
+      "y": -120.0,
+      "color": [
+        230,
+        153,
+        0
+      ],
+      "stim_amplitude": 15.0,
+      "bias_current": 0.0,
+      "params": {
+        "C_m": 1.0,
+        "g_Na_max": 120.0,
+        "g_K_max": 36.0,
+        "g_Cl": 0.3,
+        "E_Na": 60.0,
+        "E_K": -90.0,
+        "E_Cl": -70.0,
+        "Na_i": 12.0,
+        "Na_o": 145.0,
+        "K_i": 140.0,
+        "K_o": 4.0,
+        "K_Na": 10.0,
+        "K_K": 1.5,
+        "I_pump_max": 10.0
+      }
+    },
+    {
+      "name": "C",
+      "x": 200.0,
+      "y": 0.0,
+      "color": [
+        153,
+        230,
+        0
+      ],
+      "stim_amplitude": 15.0,
+      "bias_current": 0.0,
+      "params": {
+        "C_m": 1.0,
+        "g_Na_max": 120.0,
+        "g_K_max": 36.0,
+        "g_Cl": 0.3,
+        "E_Na": 60.0,
+        "E_K": -90.0,
+        "E_Cl": -70.0,
+        "Na_i": 12.0,
+        "Na_o": 145.0,
+        "K_i": 140.0,
+        "K_o": 4.0,
+        "K_Na": 10.0,
+        "K_K": 1.5,
+        "I_pump_max": 10.0
+      }
+    }
+  ],
+  "edges": [
+    {
+      "kind": "exc",
+      "src": 0,
+      "dst": 1,
+      "g": 0.5,
+      "E_rev": 0.0,
+      "alpha": 1.1,
+      "beta": 0.19,
+      "gate_ext": false,
+      "delay": 0.0,
+      "plasticity": {
+        "plastic": false,
+        "A_plus": 0.005,
+        "A_minus": 0.006,
+        "tau_plus": 20.0,
+        "tau_minus": 20.0,
+        "w_max": 2.0,
+        "tau_decay": 0.0
+      }
+    },
+    {
+      "kind": "exc",
+      "src": 1,
+      "dst": 2,
+      "g": 0.5,
+      "E_rev": 0.0,
+      "alpha": 1.1,
+      "beta": 0.19,
+      "gate_ext": false,
+      "delay": 0.0,
+      "plasticity": {
+        "plastic": false,
+        "A_plus": 0.005,
+        "A_minus": 0.006,
+        "tau_plus": 20.0,
+        "tau_minus": 20.0,
+        "w_max": 2.0,
+        "tau_decay": 0.0
+      }
+    },
+    {
+      "kind": "veto",
+      "src": 2,
+      "dst": 0,
+      "g": 1.0,
+      "E_rev": 0.0,
+      "alpha": 1.0,
+      "beta": 0.02,
+      "gate_ext": true,
+      "delay": 0.0,
+      "plasticity": {
+        "plastic": false,
+        "A_plus": 0.005,
+        "A_minus": 0.006,
+        "tau_plus": 20.0,
+        "tau_minus": 20.0,
+        "w_max": 2.0,
+        "tau_decay": 0.0
+      }
+    }
+  ]
+}
